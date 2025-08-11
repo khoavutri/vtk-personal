@@ -22,7 +22,7 @@ export const Footer = () => {
     },
     {
       icon: Facebook,
-      href: "https://www.facebook.com/khoa.tri.365.org",
+      href: config.info.facebook,
       label: "Facebook",
     },
     {

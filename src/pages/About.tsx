@@ -4,6 +4,7 @@ import { Calendar, MapPin, Mail, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import config from "../mock/config.json";
 
 const About = () => {
   const { t } = useTranslation();
@@ -105,7 +106,7 @@ const About = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>hello@vutrkhoa.dev</span>
+              <span>{`${config.info.mail}`}</span>
             </div>
           </div>
         </motion.div>

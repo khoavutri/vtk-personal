@@ -49,7 +49,7 @@ export const projects: Project[] = [
       tools: ['Docker', 'NGINX', 'PM2']
     }
   },
-  
+
   // WebGL
   {
     id: 'photo-gl-filters',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       tools: ['Webpack', 'TypeScript']
     }
   },
-  
+
   {
     id: 'glb-loader-pbr',
     title: 'GLB Loader + PBR + Shadows',
@@ -94,7 +94,7 @@ export const projects: Project[] = [
       tools: ['Vite', 'Blender']
     }
   },
-  
+
   // Chrome Extensions
   {
     id: 'eop-text-log',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
       tools: ['Webpack', 'Chrome DevTools']
     }
   },
-  
+
   {
     id: 'image2text-helper',
     title: 'Image2Text Helper (OCR)',
@@ -127,7 +127,7 @@ export const projects: Project[] = [
       tools: ['Webpack', 'Web Workers']
     }
   },
-  
+
   // Web Management
   {
     id: 'inventory-admin',
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       tools: ['Docker', 'GitHub Actions']
     }
   },
-  
+
   {
     id: 'analytics-dashboard',
     title: 'Analytics Dashboard (Recharts)',
@@ -163,7 +163,7 @@ export const projects: Project[] = [
       tools: ['Vite', 'ESLint']
     }
   },
-  
+
   // AI
   {
     id: 'docs-rag-assistant',
@@ -183,7 +183,7 @@ export const projects: Project[] = [
       tools: ['Vercel', 'Docker']
     }
   },
-  
+
   {
     id: 'youtube-views-predictor',
     title: 'YouTube Views Predictor',
@@ -200,7 +200,7 @@ export const projects: Project[] = [
       tools: ['Jupyter', 'Docker', 'YouTube API']
     }
   },
-  
+
   // Showcase
   {
     id: 'khoa-studio-landing',
@@ -218,7 +218,7 @@ export const projects: Project[] = [
       tools: ['Vite', 'Vercel']
     }
   },
-  
+
   // Libraries
   {
     id: 'photo-gl-core',
@@ -236,7 +236,7 @@ export const projects: Project[] = [
       tools: ['Rollup', 'Jest', 'TypeDoc']
     }
   },
-  
+
   {
     id: 'webrtc-sfu-utils',
     title: 'webrtc-sfu-utils',
@@ -270,7 +270,7 @@ export const getProjectById = (id: string) => {
 
 export const categories = [
   'web-management',
-  'video-conference', 
+  'video-conference',
   'webgl',
   'chrome-extension',
   'showcase',

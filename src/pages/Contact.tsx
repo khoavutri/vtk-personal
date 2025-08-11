@@ -7,13 +7,14 @@ import {
   Send,
   Github,
   Linkedin,
-  Twitter,
+  Facebook,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import config from "../mock/config.json";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -53,20 +54,20 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/vutrkhoa",
+      href: config.info.github,
       label: "GitHub",
       color: "hover:text-gray-800 dark:hover:text-white",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/vutrkhoa",
+      href: config.info.linkedin,
       label: "LinkedIn",
       color: "hover:text-blue-600",
     },
     {
-      icon: Twitter,
-      href: "https://twitter.com/vutrkhoa",
-      label: "Twitter",
+      icon: Facebook,
+      href: "https://www.facebook.com/khoa.tri.365.org",
+      label: "Facebook",
       color: "hover:text-blue-400",
     },
   ];
@@ -109,10 +110,10 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Email</p>
                     <a
-                      href="mailto:hello@vutrkhoa.dev"
+                      href={`mailto:${config.info.mail}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      hello@vutrkhoa.dev
+                      {config.info.mail}
                     </a>
                   </div>
                 </div>

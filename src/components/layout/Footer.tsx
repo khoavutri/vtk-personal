@@ -1,34 +1,35 @@
-import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { useTranslation } from "react-i18next";
+import { Github, Linkedin, Mail, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import config from "../../mock/config.json";
 
 export const Footer = () => {
-  console.log('Footer component rendering...');
-  console.log('Link component:', Link);
+  console.log("Footer component rendering...");
+  console.log("Link component:", Link);
   const { t } = useTranslation();
 
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/vutrkhoa',
-      label: 'GitHub'
+      href: config.info.github,
+      label: "GitHub",
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/vutrkhoa',
-      label: 'LinkedIn'
+      href: config.info.linkedin,
+      label: "LinkedIn",
     },
     {
-      icon: Twitter,
-      href: 'https://twitter.com/vutrkhoa',
-      label: 'Twitter'
+      icon: Facebook,
+      href: "https://www.facebook.com/khoa.tri.365.org",
+      label: "Facebook",
     },
     {
       icon: Mail,
-      href: 'mailto:hello@vutrkhoa.dev',
-      label: 'Email'
-    }
+      href: `mailto:${config.info.mail}`,
+      label: "Email",
+    },
   ];
 
   return (
@@ -38,10 +39,10 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold gradient-text">
-              {t('hero.name')}
+              {t("hero.name")}
             </h3>
             <p className="text-muted-foreground max-w-sm">
-              {t('hero.subtitle')}
+              {t("hero.subtitle")}
             </p>
           </div>
 
@@ -51,29 +52,29 @@ export const Footer = () => {
               Quick Links
             </h4>
             <div className="space-y-2">
-              <Link 
+              <Link
                 to="/"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t('nav.home')}
+                {t("nav.home")}
               </Link>
-              <Link 
+              <Link
                 to="/demos"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t('nav.demos')}
+                {t("nav.demos")}
               </Link>
-              <Link 
+              <Link
                 to="/about"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t('nav.about')}
+                {t("nav.about")}
               </Link>
-              <Link 
+              <Link
                 to="/contact"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t('nav.contact')}
+                {t("nav.contact")}
               </Link>
             </div>
           </div>
@@ -92,7 +93,7 @@ export const Footer = () => {
                   className="hover-lift focus-ring"
                   asChild
                 >
-                  <a 
+                  <a
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -109,7 +110,7 @@ export const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 {t('hero.name')}. All rights reserved.
+              © 2024 {t("hero.name")}. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
               Built with React + TypeScript + Tailwind CSS
